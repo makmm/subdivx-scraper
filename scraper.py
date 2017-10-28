@@ -9,6 +9,6 @@ for i in range(1, 20):
     sr = requests.get(soup.find_all('a', class_="titulo_menu_izq")[0].get('href')).text
     ssoup = BeautifulSoup(sr, "lxml")
 
-    file = open('scraped_stuff/Silicon.Valley.S01.E0' + str(i) + ".srt", 'w')
+    file = open('scraped_stuff/Silicon.Valley.S01.E0' + str(i) + ".zip", 'w')
     file.write(requests.get(ssoup.find_all('a', class_="link1")[0].get('href')).text)
     file.close()
